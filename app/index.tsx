@@ -1,6 +1,9 @@
+import { Link, useRouter } from "expo-router";
 import { Button, Text, View } from "react-native";
 
 export default function Index() {
+  const router = useRouter();
+
   return (
     <View
       style={{
@@ -12,7 +15,9 @@ export default function Index() {
       <Text>TODO: Top Nav Tabs for different recommendation media types</Text>
       <Text>TODO: Empty state when there are no recommendations</Text>
       <Text>TODO: Floating Action Button for new recommendation</Text>
-      <Button title="New Recommendation" onPress={() => {}} />
+      <Button title="New Recommendation" onPress={() => router.navigate("./newRecommendation")}/>
+
+      <Button title="Test" onPress={() => router.navigate("/test")}/>
     </View>
   );
 }
