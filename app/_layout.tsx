@@ -10,8 +10,22 @@ export default function RootLayout() {
       fontWeight: 'bold',
     },
   }}>
-    <Stack.Screen name="index" options={{ title: 'Recommendations' }} />
-    <Stack.Screen name="newRecommendation" options={{ title: 'New Recommendation' }} />
-    <Stack.Screen name="test" options={{ title: 'Test' }} />
+    <Stack.Screen 
+    name="index" 
+    options={{ 
+      title: 'Recommendations' 
+      }} 
+      />
+    <Stack.Screen 
+    name="newRecommendation" 
+    options={{ 
+      title: 'New Recommendation' 
+      }} />
+    <Stack.Screen 
+    name="test" 
+    options={{ 
+      title: 'Test' 
+      }} 
+      />
   </Stack>;
 }
