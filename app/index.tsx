@@ -1,25 +1,90 @@
-import { Link, useRouter } from "expo-router";
-import { Button, Text, View } from "react-native";
-import { PaperProvider } from "react-native-paper";
+import ListFilters from "@/components/ui/ListFilters";
+import { useRouter } from "expo-router";
+import { View } from "react-native";
+import {
+  GestureHandlerRootView,
+  ScrollView,
+} from "react-native-gesture-handler";
+import { PaperProvider, FAB, Card } from "react-native-paper";
 
 export default function Index() {
   const router = useRouter();
 
   return (
     <PaperProvider>
+      <ListFilters />
+      <GestureHandlerRootView style={{ flex: 2 }}>
+        <ScrollView
+          style={{
+            flex: 2,
+            // justifyContent: "flex-start",
+            // alignItems: "center",
+          }}
+        >
+          <Card>
+            <Card.Title
+              title="Recommendation 1"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 2"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 3"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 4"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 5"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 6"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 7"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 8"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 9"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 10"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 11"
+              subtitle="Recommended by: User"
+            />
+            <Card.Title
+              title="Recommendation 12"
+              subtitle="Recommended by: User"
+            />
+          </Card>
+        </ScrollView>
+      </GestureHandlerRootView>
       <View
         style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          margin: 36,
         }}
       >
-        <Text>TODO: Top Nav Tabs for different recommendation media types</Text>
-        <Text>TODO: Empty state when there are no recommendations</Text>
-        <Text>TODO: Floating Action Button for new recommendation</Text>
-        <Button title="New Recommendation" onPress={() => router.navigate("./newRecommendation")}/>
-
-        <Button title="Test" onPress={() => router.navigate("/test")}/>
+        <FAB
+          icon="plus"
+          onPress={() => router.navigate("./newRecommendation")}
+        />
       </View>
     </PaperProvider>
   );
